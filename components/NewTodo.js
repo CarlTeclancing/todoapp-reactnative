@@ -1,7 +1,7 @@
 // src/components/NewTodo.js
 
 import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { View, TextInput, Button, StyleSheet } from 'react-native';
 
 const NewTodo = ({ onAddTodo }) => {
   const [text, setText] = useState('');
@@ -17,7 +17,7 @@ const NewTodo = ({ onAddTodo }) => {
 
   return (
     <View>
-      <TextInput
+      <TextInput style={StyleSheet.in}
         value={text}
         onChangeText={setText}
         placeholder="Enter Todo "
@@ -30,11 +30,14 @@ const NewTodo = ({ onAddTodo }) => {
       />
     </View>
   );
-  TextInput:{
-    width:300;
-    paddingVertical:8;
-    borderWidth:2;
-  }
+
 };
+const styles = StyleSheet.create({
+  in:{
+    width:100,
+    height:100,
+
+  }
+})
 
 export default NewTodo;
