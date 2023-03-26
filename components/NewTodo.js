@@ -30,7 +30,11 @@ const NewTodo = ({ onAddTodo }) => {
       />
     </View>
   );
-
+  TextInput:{
+    width:300;
+    paddingVertical:8;
+    borderWidth:2;
+  }
 };
 const styles = StyleSheet.create({
   in:{
